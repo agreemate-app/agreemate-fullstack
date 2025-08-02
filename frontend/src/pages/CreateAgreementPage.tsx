@@ -35,27 +35,32 @@ const agreementTypes: AgreementType[] = [
   {
     value: 'rental',
     label: 'Rental Agreement',
-    fields: ['landlordName', 'landlordAddress', 'tenantName', 'tenantAddress', 'propertyAddress', 'rentAmount', 'securityDeposit', 'leaseDuration', 'startDate', 'endDate']
+    fields: ['landlordName', 'landlordAddress', 'landlordPhone', 'landlordEmail', 'tenantName', 'tenantAddress', 'tenantPhone', 'tenantEmail', 'propertyAddress', 'propertyType', 'rentAmount', 'securityDeposit', 'startDate', 'endDate', 'lockInPeriod', 'rentDueDate', 'noticePeriod', 'witness1Name', 'witness1Address', 'witness2Name', 'witness2Address']
   },
   {
     value: 'employment',
-    label: 'Employment Agreement',
-    fields: ['employerName', 'employerAddress', 'employeeName', 'employeeAddress', 'position', 'salary', 'startDate', 'probationPeriod', 'noticePeriod']
+    label: 'Employment Contract',
+    fields: ['employerName', 'employerAddress', 'employerRegistration', 'employeeName', 'employeeAddress', 'employeePhone', 'employeeEmail', 'employeePAN', 'position', 'department', 'salary', 'basicSalary', 'allowances', 'bonusStructure', 'startDate', 'contractDate', 'employmentType', 'probationPeriod', 'workLocation', 'reportingManager', 'workingHours', 'leaveEntitlement', 'medicalInsurance', 'noticePeriod', 'witness1Name', 'witness1Address', 'witness2Name', 'witness2Address']
   },
   {
     value: 'service',
     label: 'Service Agreement',
-    fields: ['clientName', 'clientAddress', 'providerName', 'providerAddress', 'serviceDescription', 'serviceAmount', 'startDate', 'endDate', 'paymentTerms']
+    fields: ['serviceProviderName', 'serviceProviderAddress', 'clientName', 'clientAddress', 'serviceDescription', 'serviceAmount', 'startDate', 'endDate', 'paymentTerms']
   },
   {
-    value: 'sale',
-    label: 'Sale Agreement',
-    fields: ['sellerName', 'sellerAddress', 'buyerName', 'buyerAddress', 'itemDescription', 'saleAmount', 'deliveryDate', 'paymentTerms']
+    value: 'buyer_seller',
+    label: 'Buyer-Seller Agreement',
+    fields: ['sellerName', 'sellerAddress', 'sellerPhone', 'sellerEmail', 'buyerName', 'buyerAddress', 'buyerPhone', 'buyerEmail', 'propertyDescription', 'propertyAddress', 'salePrice', 'advanceAmount', 'balanceAmount', 'completionDate', 'agreementDate', 'witness1Name', 'witness1Address', 'witness2Name', 'witness2Address']
   },
   {
-    value: 'partnership',
-    label: 'Partnership Agreement',
-    fields: ['partner1Name', 'partner1Address', 'partner2Name', 'partner2Address', 'businessName', 'businessAddress', 'investmentAmount', 'profitSharingRatio']
+    value: 'nda',
+    label: 'Non-Disclosure Agreement',
+    fields: ['disclosingPartyName', 'disclosingPartyAddress', 'disclosingPartyEmail', 'receivingPartyName', 'receivingPartyAddress', 'receivingPartyEmail', 'purpose', 'termDuration', 'agreementDate']
+  },
+  {
+    value: 'loan',
+    label: 'Loan Agreement',
+    fields: ['lenderName', 'lenderAddress', 'borrowerName', 'borrowerAddress', 'loanAmount', 'interestRate', 'startDate', 'endDate', 'repaymentDay', 'lateInterestRate', 'defaultInterestRate', 'agreementDate', 'witness1Name', 'witness1Address', 'witness2Name', 'witness2Address']
   }
 ]
 

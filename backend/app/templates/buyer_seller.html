@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buyer-Seller Agreement</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        .header { text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 30px; }
+        .section { margin-bottom: 20px; }
+        .signature-section { margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="header">BUYER-SELLER AGREEMENT</div>
+    
+    <div class="section">
+        <p>This Agreement is made on {{ agreementDate }} between:</p>
+        
+        <p><strong>SELLER:</strong><br>
+        Name: {{ sellerName }}<br>
+        Address: {{ sellerAddress }}<br>
+        Phone: {{ sellerPhone }}<br>
+        Email: {{ sellerEmail }}</p>
+        
+        <p><strong>BUYER:</strong><br>
+        Name: {{ buyerName }}<br>
+        Address: {{ buyerAddress }}<br>
+        Phone: {{ buyerPhone }}<br>
+        Email: {{ buyerEmail }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>PROPERTY DETAILS</h3>
+        <p><strong>Property Description:</strong> {{ propertyDescription }}</p>
+        <p><strong>Property Address:</strong> {{ propertyAddress }}</p>
+        <p><strong>Sale Price:</strong> ₹{{ salePrice }}</p>
+        <p><strong>Advance Amount:</strong> ₹{{ advanceAmount }}</p>
+        <p><strong>Balance Amount:</strong> ₹{{ balanceAmount }}</p>
+        <p><strong>Completion Date:</strong> {{ completionDate }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>TERMS AND CONDITIONS</h3>
+        <p>1. The Seller agrees to sell and the Buyer agrees to purchase the above-mentioned property.</p>
+        <p>2. The total consideration for the sale is ₹{{ salePrice }}.</p>
+        <p>3. An advance of ₹{{ advanceAmount }} has been paid, and the balance of ₹{{ balanceAmount }} shall be paid on {{ completionDate }}.</p>
+        <p>4. The Seller warrants clear and marketable title to the property.</p>
+        <p>5. All necessary documents shall be executed on the completion date.</p>
+        <p>6. This agreement is governed by the laws of {{ state }}.</p>
+    </div>
+    
+    <div class="signature-section">
+        <table width="100%">
+            <tr>
+                <td width="50%">
+                    <p>SELLER</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>{{ sellerName }}</p>
+                    <p>Date: _______________</p>
+                </td>
+                <td width="50%">
+                    <p>BUYER</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>{{ buyerName }}</p>
+                    <p>Date: _______________</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="signature-section">
+        <p><strong>WITNESSES:</strong></p>
+        <table width="100%">
+            <tr>
+                <td width="50%">
+                    <p>Witness 1</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>Name: {{ witness1Name }}</p>
+                    <p>Address: {{ witness1Address }}</p>
+                </td>
+                <td width="50%">
+                    <p>Witness 2</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>Name: {{ witness2Name }}</p>
+                    <p>Address: {{ witness2Address }}</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

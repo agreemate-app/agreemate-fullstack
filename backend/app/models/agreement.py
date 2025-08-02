@@ -7,6 +7,9 @@ class AgreementType(str, Enum):
     RENTAL = "rental"
     EMPLOYMENT = "employment"
     SERVICE = "service"
+    BUYER_SELLER = "buyer_seller"
+    NDA = "nda"
+    LOAN = "loan"
     SALE = "sale"
     PARTNERSHIP = "partnership"
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Non-Disclosure Agreement</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        .header { text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 30px; }
+        .section { margin-bottom: 20px; }
+        .signature-section { margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="header">NON-DISCLOSURE AGREEMENT</div>
+    
+    <div class="section">
+        <p>This Non-Disclosure Agreement ("Agreement") is entered into on {{ agreementDate }} between:</p>
+        
+        <p><strong>DISCLOSING PARTY:</strong><br>
+        Name: {{ disclosingPartyName }}<br>
+        Address: {{ disclosingPartyAddress }}<br>
+        Email: {{ disclosingPartyEmail }}</p>
+        
+        <p><strong>RECEIVING PARTY:</strong><br>
+        Name: {{ receivingPartyName }}<br>
+        Address: {{ receivingPartyAddress }}<br>
+        Email: {{ receivingPartyEmail }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>PURPOSE</h3>
+        <p>The purpose of this Agreement is to protect confidential information that may be disclosed in connection with: {{ purpose }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>CONFIDENTIAL INFORMATION</h3>
+        <p>For purposes of this Agreement, "Confidential Information" means any and all non-public, confidential or proprietary information disclosed by the Disclosing Party, including but not limited to:</p>
+        <ul>
+            <li>Technical data, trade secrets, know-how, research, product plans</li>
+            <li>Business information, customer lists, financial information</li>
+            <li>Any other information marked as confidential</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h3>OBLIGATIONS</h3>
+        <p>The Receiving Party agrees to:</p>
+        <ol>
+            <li>Hold all Confidential Information in strict confidence</li>
+            <li>Not disclose Confidential Information to any third party</li>
+            <li>Use Confidential Information solely for the stated purpose</li>
+            <li>Return or destroy all Confidential Information upon request</li>
+        </ol>
+    </div>
+    
+    <div class="section">
+        <h3>TERM</h3>
+        <p>This Agreement shall remain in effect for {{ termDuration }} from the date of execution, unless terminated earlier by mutual consent.</p>
+    </div>
+    
+    <div class="section">
+        <h3>GOVERNING LAW</h3>
+        <p>This Agreement shall be governed by the laws of {{ state }}.</p>
+    </div>
+    
+    <div class="signature-section">
+        <table width="100%">
+            <tr>
+                <td width="50%">
+                    <p>DISCLOSING PARTY</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>{{ disclosingPartyName }}</p>
+                    <p>Date: _______________</p>
+                </td>
+                <td width="50%">
+                    <p>RECEIVING PARTY</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>{{ receivingPartyName }}</p>
+                    <p>Date: _______________</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

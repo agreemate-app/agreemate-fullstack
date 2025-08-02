@@ -3,60 +3,102 @@
 <head>
     <title>Employment Agreement</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        h1 { text-align: center; margin-bottom: 30px; }
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        .header { text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 30px; }
         .section { margin-bottom: 20px; }
-        .party { background-color: #f5f5f5; padding: 15px; margin: 10px 0; }
+        .signature-section { margin-top: 40px; }
     </style>
 </head>
 <body>
-    <h1>EMPLOYMENT AGREEMENT</h1>
+    <div class="header">EMPLOYMENT CONTRACT</div>
     
     <div class="section">
-        <p>This employment agreement is made on <strong>{{ startDate }}</strong> between:</p>
-    </div>
-    
-    <div class="party">
-        <h3>EMPLOYER</h3>
-        <p><strong>Company Name:</strong> {{ employerName }}</p>
-        <p><strong>Address:</strong> {{ employerAddress }}</p>
-    </div>
-    
-    <div class="party">
-        <h3>EMPLOYEE</h3>
-        <p><strong>Name:</strong> {{ employeeName }}</p>
-        <p><strong>Address:</strong> {{ employeeAddress }}</p>
+        <p>This Employment Contract is made on {{ contractDate }} between:</p>
+        
+        <p><strong>EMPLOYER:</strong><br>
+        Company: {{ employerName }}<br>
+        Address: {{ employerAddress }}<br>
+        Registration Number: {{ employerRegistration }}</p>
+        
+        <p><strong>EMPLOYEE:</strong><br>
+        Name: {{ employeeName }}<br>
+        Address: {{ employeeAddress }}<br>
+        Phone: {{ employeePhone }}<br>
+        Email: {{ employeeEmail }}<br>
+        PAN: {{ employeePAN }}</p>
     </div>
     
     <div class="section">
         <h3>EMPLOYMENT DETAILS</h3>
         <p><strong>Position:</strong> {{ position }}</p>
+        <p><strong>Department:</strong> {{ department }}</p>
         <p><strong>Annual Salary:</strong> ₹{{ salary }}</p>
         <p><strong>Start Date:</strong> {{ startDate }}</p>
+        <p><strong>Employment Type:</strong> {{ employmentType }}</p>
         <p><strong>Probation Period:</strong> {{ probationPeriod }} months</p>
         <p><strong>Work Location:</strong> {{ workLocation }}</p>
+        <p><strong>Reporting Manager:</strong> {{ reportingManager }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>COMPENSATION & BENEFITS</h3>
+        <p><strong>Basic Salary:</strong> ₹{{ basicSalary }}</p>
+        <p><strong>Allowances:</strong> ₹{{ allowances }}</p>
+        <p><strong>Annual Bonus:</strong> {{ bonusStructure }}</p>
+        <p><strong>Leave Entitlement:</strong> {{ leaveEntitlement }} days per year</p>
+        <p><strong>Medical Insurance:</strong> {{ medicalInsurance }}</p>
     </div>
     
     <div class="section">
         <h3>TERMS AND CONDITIONS</h3>
-        <p>1. The employee agrees to work diligently and maintain confidentiality.</p>
-        <p>2. The employee will be entitled to statutory benefits as per company policy.</p>
-        <p>3. Either party may terminate this agreement with 30 days written notice.</p>
-        <p>4. The employee agrees to comply with all company policies and procedures.</p>
+        <p>1. The employee agrees to perform duties assigned diligently, professionally, and in the best interests of the company.</p>
+        <p>2. Working hours are {{ workingHours }}, with flexibility as per business requirements.</p>
+        <p>3. The employee shall maintain strict confidentiality regarding company information, trade secrets, and client data.</p>
+        <p>4. The employee shall not engage in any competing business or work for competitors during employment.</p>
+        <p>5. Notice period for resignation is {{ noticePeriod }} days for both parties.</p>
+        <p>6. The company reserves the right to terminate employment for misconduct or poor performance.</p>
+        <p>7. This contract is governed by the laws of {{ state }}.</p>
     </div>
     
-    <div class="section" style="margin-top: 50px;">
+    <div class="signature-section">
         <table width="100%">
             <tr>
                 <td width="50%">
+                    <p>EMPLOYER</p>
+                    <br><br>
                     <p>_________________________</p>
-                    <p>Employer Signature</p>
                     <p>{{ employerName }}</p>
+                    <p>Authorized Signatory</p>
+                    <p>Date: _______________</p>
                 </td>
                 <td width="50%">
+                    <p>EMPLOYEE</p>
+                    <br><br>
                     <p>_________________________</p>
-                    <p>Employee Signature</p>
                     <p>{{ employeeName }}</p>
+                    <p>Date: _______________</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="signature-section">
+        <p><strong>WITNESSES:</strong></p>
+        <table width="100%">
+            <tr>
+                <td width="50%">
+                    <p>Witness 1</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>Name: {{ witness1Name }}</p>
+                    <p>Address: {{ witness1Address }}</p>
+                </td>
+                <td width="50%">
+                    <p>Witness 2</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>Name: {{ witness2Name }}</p>
+                    <p>Address: {{ witness2Address }}</p>
                 </td>
             </tr>
         </table>

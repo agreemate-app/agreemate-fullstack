@@ -62,6 +62,35 @@ class PDFService:
             story.append(Paragraph(f"<b>Start Date:</b> {template_data.get('startDate', '[Start Date]')}", self.styles['Normal']))
             story.append(Paragraph(f"<b>Work Location:</b> {template_data.get('workLocation', '[Work Location]')}", self.styles['Normal']))
             
+        elif agreement_type == AgreementType.BUYER_SELLER:
+            story.append(Paragraph("BUYER-SELLER AGREEMENT", self.title_style))
+            story.append(Spacer(1, 12))
+            
+            story.append(Paragraph(f"<b>Seller:</b> {template_data.get('sellerName', '[Seller Name]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Buyer:</b> {template_data.get('buyerName', '[Buyer Name]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Property:</b> {template_data.get('propertyDescription', '[Property Description]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Sale Price:</b> ₹{template_data.get('salePrice', '[Sale Price]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Completion Date:</b> {template_data.get('completionDate', '[Completion Date]')}", self.styles['Normal']))
+            
+        elif agreement_type == AgreementType.NDA:
+            story.append(Paragraph("NON-DISCLOSURE AGREEMENT", self.title_style))
+            story.append(Spacer(1, 12))
+            
+            story.append(Paragraph(f"<b>Disclosing Party:</b> {template_data.get('disclosingPartyName', '[Disclosing Party]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Receiving Party:</b> {template_data.get('receivingPartyName', '[Receiving Party]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Purpose:</b> {template_data.get('purpose', '[Purpose]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Duration:</b> {template_data.get('termDuration', '[Duration]')}", self.styles['Normal']))
+            
+        elif agreement_type == AgreementType.LOAN:
+            story.append(Paragraph("LOAN AGREEMENT", self.title_style))
+            story.append(Spacer(1, 12))
+            
+            story.append(Paragraph(f"<b>Lender:</b> {template_data.get('lenderName', '[Lender Name]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Borrower:</b> {template_data.get('borrowerName', '[Borrower Name]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Loan Amount:</b> ₹{template_data.get('loanAmount', '[Loan Amount]')}", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Interest Rate:</b> {template_data.get('interestRate', '[Interest Rate]')}%", self.styles['Normal']))
+            story.append(Paragraph(f"<b>Start Date:</b> {template_data.get('startDate', '[Start Date]')}", self.styles['Normal']))
+            
         else:
             story.append(Paragraph("SERVICE AGREEMENT", self.title_style))
             story.append(Spacer(1, 12))

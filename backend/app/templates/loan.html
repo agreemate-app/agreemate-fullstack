@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Agreement</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        .header { text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 30px; }
+        .section { margin-bottom: 20px; }
+        .signature-section { margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="header">LOAN AGREEMENT</div>
+    
+    <div class="section">
+        <p>This Loan Agreement is dated {{ agreementDate }} between:</p>
+        
+        <p><strong>LENDER:</strong><br>
+        Name: {{ lenderName }}<br>
+        Address: {{ lenderAddress }}</p>
+        
+        <p><strong>BORROWER:</strong><br>
+        Name: {{ borrowerName }}<br>
+        Address: {{ borrowerAddress }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>LOAN AMOUNT & INTEREST</h3>
+        <p>1. The Lender promises to loan ₹{{ loanAmount }} to the Borrower and the Borrower promises to repay this principal amount to the Lender, with interest payable on the unpaid principal at the rate of {{ interestRate }} per cent per annum, calculated monthly not in advance, beginning on {{ startDate }}.</p>
+    </div>
+    
+    <div class="section">
+        <h3>PAYMENT</h3>
+        <p>2. This Loan will be repaid in consecutive monthly instalments of principal and interest commencing on {{ startDate }} and continuing on the {{ repaymentDay }} of each following month until {{ endDate }} with the balance then owing under this Agreement being paid at that time.</p>
+        <p>3. At any time while not in default under this Agreement, the Borrower may make lump sum payments or pay the outstanding balance then owing under this Agreement to the Lender without further bonus or penalty.</p>
+    </div>
+    
+    <div class="section">
+        <h3>LATE PAYMENT</h3>
+        <p>4. Should the Borrower fail to make a payment by the date that it is due, interest at the rate of {{ lateInterestRate }} percent per annum, calculated yearly not in advance, will be charged on the outstanding payment amount, commencing the day of the missed payment, until full payment is received by the Lender.</p>
+    </div>
+    
+    <div class="section">
+        <h3>DEFAULT</h3>
+        <p>5. Notwithstanding anything to the contrary in this Agreement, if the Borrower defaults in the performance of any obligation under this Agreement, then the Lender may declare the principal amount owing and interest due under this Agreement at that time to be immediately due and payable.</p>
+        <p>6. Further, if the Lender declares the principal amount owing under this Agreement to be immediately due and payable, and the Borrower fails to provide full payment, interest at the rate of {{ defaultInterestRate }} per cent per annum, calculated yearly not in advance, will be charged on the outstanding amount, commencing the day the principal amount is declared due and payable, until full payment is received by the Lender.</p>
+    </div>
+    
+    <div class="section">
+        <h3>GOVERNING LAW</h3>
+        <p>7. This Agreement will be construed in accordance with and governed by the laws of {{ state }}.</p>
+    </div>
+    
+    <div class="signature-section">
+        <table width="100%">
+            <tr>
+                <td width="50%">
+                    <p>LENDER</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>{{ lenderName }}</p>
+                    <p>Date: _______________</p>
+                </td>
+                <td width="50%">
+                    <p>BORROWER</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>{{ borrowerName }}</p>
+                    <p>Date: _______________</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="signature-section">
+        <p><strong>WITNESSES:</strong></p>
+        <table width="100%">
+            <tr>
+                <td width="50%">
+                    <p>Witness 1</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>Name: {{ witness1Name }}</p>
+                    <p>Address: {{ witness1Address }}</p>
+                </td>
+                <td width="50%">
+                    <p>Witness 2</p>
+                    <br><br>
+                    <p>_________________________</p>
+                    <p>Name: {{ witness2Name }}</p>
+                    <p>Address: {{ witness2Address }}</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
