@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rental Agreement</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .section { margin-bottom: 20px; }
+        .party { background-color: #f5f5f5; padding: 15px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>RENTAL AGREEMENT</h1>
+    
+    <div class="section">
+        <p>This rental agreement is made on <strong>{{ startDate }}</strong> between:</p>
+    </div>
+    
+    <div class="party">
+        <h3>LANDLORD</h3>
+        <p><strong>Name:</strong> {{ landlordName }}</p>
+        <p><strong>Address:</strong> {{ landlordAddress }}</p>
+    </div>
+    
+    <div class="party">
+        <h3>TENANT</h3>
+        <p><strong>Name:</strong> {{ tenantName }}</p>
+        <p><strong>Address:</strong> {{ tenantAddress }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>PROPERTY DETAILS</h3>
+        <p><strong>Property Address:</strong> {{ propertyAddress }}</p>
+        <p><strong>Monthly Rent:</strong> ₹{{ rentAmount }}</p>
+        <p><strong>Security Deposit:</strong> ₹{{ securityDeposit }}</p>
+        <p><strong>Lease Duration:</strong> {{ leaseDuration }} months</p>
+        <p><strong>Lease Period:</strong> {{ startDate }} to {{ endDate }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>TERMS AND CONDITIONS</h3>
+        <p>1. The tenant agrees to pay the monthly rent on or before the 5th of each month.</p>
+        <p>2. The security deposit will be refunded at the end of the lease period, subject to property condition.</p>
+        <p>3. The tenant is responsible for maintaining the property in good condition.</p>
+        <p>4. Any damages beyond normal wear and tear will be deducted from the security deposit.</p>
+    </div>
+    
+    <div class="section" style="margin-top: 50px;">
+        <table width="100%">
+            <tr>
+                <td width="50%">
+                    <p>_________________________</p>
+                    <p>Landlord Signature</p>
+                    <p>{{ landlordName }}</p>
+                </td>
+                <td width="50%">
+                    <p>_________________________</p>
+                    <p>Tenant Signature</p>
+                    <p>{{ tenantName }}</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

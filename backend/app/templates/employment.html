@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employment Agreement</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .section { margin-bottom: 20px; }
+        .party { background-color: #f5f5f5; padding: 15px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>EMPLOYMENT AGREEMENT</h1>
+    
+    <div class="section">
+        <p>This employment agreement is made on <strong>{{ startDate }}</strong> between:</p>
+    </div>
+    
+    <div class="party">
+        <h3>EMPLOYER</h3>
+        <p><strong>Company Name:</strong> {{ employerName }}</p>
+        <p><strong>Address:</strong> {{ employerAddress }}</p>
+    </div>
+    
+    <div class="party">
+        <h3>EMPLOYEE</h3>
+        <p><strong>Name:</strong> {{ employeeName }}</p>
+        <p><strong>Address:</strong> {{ employeeAddress }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>EMPLOYMENT DETAILS</h3>
+        <p><strong>Position:</strong> {{ position }}</p>
+        <p><strong>Annual Salary:</strong> ₹{{ salary }}</p>
+        <p><strong>Start Date:</strong> {{ startDate }}</p>
+        <p><strong>Probation Period:</strong> {{ probationPeriod }} months</p>
+        <p><strong>Work Location:</strong> {{ workLocation }}</p>
+    </div>
+    
+    <div class="section">
+        <h3>TERMS AND CONDITIONS</h3>
+        <p>1. The employee agrees to work diligently and maintain confidentiality.</p>
+        <p>2. The employee will be entitled to statutory benefits as per company policy.</p>
+        <p>3. Either party may terminate this agreement with 30 days written notice.</p>
+        <p>4. The employee agrees to comply with all company policies and procedures.</p>
+    </div>
+    
+    <div class="section" style="margin-top: 50px;">
+        <table width="100%">
+            <tr>
+                <td width="50%">
+                    <p>_________________________</p>
+                    <p>Employer Signature</p>
+                    <p>{{ employerName }}</p>
+                </td>
+                <td width="50%">
+                    <p>_________________________</p>
+                    <p>Employee Signature</p>
+                    <p>{{ employeeName }}</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
